@@ -366,6 +366,6 @@ Please make sure all RSpec tests pass before submitting.
 
 <div align="center">
 
- by **ganesh44we** · [github.com/ganesh44we/rv-compiler](https://github.com/ganesh44we/rv-compiler)
+ by **ganesh44we** 
 
 </div>
