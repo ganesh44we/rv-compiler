@@ -190,32 +190,32 @@ npm start
 
 | Feature | Supported |
 |---------|-----------|
-| Variables & arithmetic | ✅ |
-| Functions (`def`) | ✅ |
-| Classes & inheritance | ✅ |
-| `if / elif / else` | ✅ |
-| `for` / `while` loops | ✅ |
-| Lists, dicts, sets | ✅ |
-| `import` statements | ✅ |
-| `try / except` | ✅ |
-| Lambda expressions | ✅ |
-| NumPy / Pandas shims | ✅ |
-| `requests` HTTP shim | ✅ |
+| Variables & arithmetic | yes |
+| Functions (`def`) | yes |
+| Classes & inheritance | yes |
+| `if / elif / else` | yes |
+| `for` / `while` loops | yes |
+| Lists, dicts, sets | yes |
+| `import` statements | yes |
+| `try / except` | yes |
+| Lambda expressions | yes |
+| NumPy / Pandas shims | yes |
+| `requests` HTTP shim | yes |
 
 ### Ruby Features
 
 | Feature | Supported |
 |---------|-----------|
-| Variables & arithmetic | ✅ |
-| Methods (`def`) | ✅ |
-| Classes & inheritance | ✅ |
-| `if / elsif / else` | ✅ |
-| `while` / `each` loops | ✅ |
-| Arrays & hashes | ✅ |
-| `require` / `require_relative` | ✅ |
-| `begin / rescue` | ✅ |
-| Blocks & lambdas | ✅ |
-| `net/http` shim | ✅ |
+| Variables & arithmetic | yes |
+| Methods (`def`) | yes |
+| Classes & inheritance | yes |
+| `if / elsif / else` | yes |
+| `while` / `each` loops | yes |
+| Arrays & hashes | yes |
+| `require` / `require_relative` | yes |
+| `begin / rescue` | yes |
+| Blocks & lambdas | yes |
+| `net/http` shim | yes |
 
 ---
 
@@ -366,6 +366,6 @@ Please make sure all RSpec tests pass before submitting.
 
 <div align="center">
 
-Built with ❤️ by **ganesh44we** · [github.com/ganesh44we/rv-compiler](https://github.com/ganesh44we/rv-compiler)
+ by **ganesh44we** · [github.com/ganesh44we/rv-compiler](https://github.com/ganesh44we/rv-compiler)
 
 </div>
