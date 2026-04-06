@@ -1,0 +1,32 @@
+# Error Handling Showcase
+
+def safe_divide(a, b)
+  begin
+    print("Attempting division...")
+    if b == 0
+      raise("Oops! Division by zero detected.")
+    end
+    result = a / b
+    print("Result: " + result)
+    result
+  rescue
+    print("Caught an error! Returning default value 0.")
+    0
+  ensure
+    print("Division attempt completed.")
+  end
+end
+
+# Test cases
+print("--- Case 1: Success ---")
+print(safe_divide(10, 2))
+
+print("--- Case 2: Failure ---")
+print(safe_divide(10, 0))
+
+# Showcase Diagnostics
+# Intentionally causing a syntax error (uncomment to test)
+# def bad_syntax
+#   if true
+#     print("Missing end")
+# end

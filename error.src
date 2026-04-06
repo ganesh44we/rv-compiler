@@ -1,0 +1,4 @@
+def bad
+  if true
+    print("Missing end")
+# No end here

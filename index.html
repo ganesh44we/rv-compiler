@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RV Studio — Multi-Language Compiler IDE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+
+    <!-- ═══════════ TOP BAR (Traffic Lights + Centered Brand) ═══════════ -->
+    <header class="app-header" id="title-bar">
+      <div class="header-left">
+        <div class="traffic-spacer"></div>
+        <div class="file-indicator" id="file-indicator">
+          <span class="dot dot-active"></span>
+          <span id="file-name">Untitled</span>
+        </div>
+      </div>
+
+      <div class="header-center">
+        <div class="logo">
+          <span class="rv-icon">⚡</span>
+          <span class="rv-brand">RV</span>
+          <span class="rv-studio">Studio</span>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <select id="lang-select" title="Select source language">
+          <option value="python">🐍 Python</option>
+          <option value="ruby">💎 Ruby</option>
+        </select>
+        <button id="btn-optimize" class="btn-secondary" title="Toggle Optimizer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>
+          Optimize
+        </button>
+        <button id="btn-run" class="btn-primary" title="Compile & Run (⌘+Enter)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          Run
+        </button>
+      </div>
+    </header>
+
+    <!-- ═══════════ MAIN EDITOR DASHBOARD ═══════════ -->
+    <main class="dashboard">
+      <!-- Source Code Panel -->
+      <section class="pane source-pane" id="source-section">
+        <div class="pane-header">
+          <div class="pane-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Source Code
+          </div>
+          <div class="pane-badge" id="line-count">0 lines</div>
+        </div>
+        <div class="editor-wrap">
+          <textarea id="source-editor" spellcheck="false" placeholder="Write your Python or Ruby code here..."></textarea>
+        </div>
+      </section>
+
+      <!-- Compiled Output Panel -->
+      <section class="pane target-pane" id="target-section">
+        <div class="pane-header">
+          <div class="pane-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Compiled JavaScript
+          </div>
+          <div class="pane-badge" id="compile-status">Ready</div>
+        </div>
+        <div class="output-wrap">
+          <pre id="js-output"><code>// Compiled output will appear here as you type...</code></pre>
+        </div>
+      </section>
+
+      <!-- Execution Console Panel -->
+      <section class="pane console-pane" id="console-section">
+        <div class="pane-header">
+          <div class="pane-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+            Execution Console
+          </div>
+          <button class="btn-clear" id="btn-clear" title="Clear console">Clear</button>
+        </div>
+        <div id="console-output" class="console-body">
+          <span class="console-welcome">Welcome to RV Studio. Write code on the left and press <kbd>Run</kbd> to execute.</span>
+        </div>
+      </section>
+    </main>
+
+    <!-- ═══════════ STATUS BAR ═══════════ -->
+    <footer class="status-bar">
+      <div class="status-left">
+        <span class="status-item" id="status-lang">Python</span>
+        <span class="status-sep">|</span>
+        <span class="status-item" id="status-lines">Ln 1, Col 1</span>
+      </div>
+      <div class="status-center">
+        <span class="status-item" id="status-message">RV Compiler v2.0 — Networking & Git Ready</span>
+      </div>
+      <div class="status-right">
+        <span class="status-item" id="status-perf"></span>
+      </div>
+    </footer>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>
