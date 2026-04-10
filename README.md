@@ -366,6 +366,6 @@ Please make sure all RSpec tests pass before submitting.
 
 <div align="center">
 
- by **ganesh44we** 
+ Author  **ganesh44we** 
 
 </div>
